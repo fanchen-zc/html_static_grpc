@@ -1,0 +1,20 @@
+syntax = "proto3"; // 指定语法格式
+
+package html_static;   // html_static.pb.go 的包名
+
+option go_package = "./";   //指定生成目录
+
+//定义开放调用的服务
+service HTMLService {
+  //定义服务内的 GetHTMLContent 远程调用
+  rpc GetHTMLContent (HTMLRequest) returns (HTMLResponse);
+}
+
+message HTMLRequest {
+  string url = 1;
+}
+
+//定义服务端响应的数据格式
+message HTMLResponse {
+  string content = 1;
+}

@@ -142,8 +142,6 @@ func setup() {
 
 	zerolog.SetGlobalLevel(zerolog.DebugLevel)
 	config.Default()
-	service2.Setup()
-	//cron.SetUp()
 	service2.RodStep()
 }
 
