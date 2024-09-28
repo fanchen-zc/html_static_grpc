@@ -7,9 +7,11 @@ import (
 	"runtime"
 )
 
-var RodBrowser *rod.Browser
-var RodPool rod.PagePool
-var RodCreate func() *rod.Page
+var (
+	RodBrowser *rod.Browser
+	RodPool    rod.PagePool
+	RodCreate  func() *rod.Page
+)
 
 func RodStep() {
 
@@ -19,7 +21,6 @@ func RodStep() {
 		MustLaunch()
 
 	RodBrowser = rod.New().ControlURL(u).MustConnect()
-
 	//defer RodBrowser.MustClose()
 
 	//页面池可以使用页面池来辅助同时控制和复用多个页面。

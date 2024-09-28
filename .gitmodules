@@ -1,0 +1,3 @@
+[submodule "service/servicehtml_static"]
+	path = service/servicehtml_static
+	url = https://github.com/fanchen-zc/html_static_grpc
